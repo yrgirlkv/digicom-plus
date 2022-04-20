@@ -1,5 +1,5 @@
-from flask import Flask
-from flask import request
+from flask import Flask, request
+from server import model
 
 app = Flask(__name__)
 
@@ -11,5 +11,5 @@ def root():
 
 @app.route("/<id>", methods=["GET"])
 def get_id(id):
-    print("request", request)
-    return id
+    print("request: ", request)
+    return model.risk_model(id)
