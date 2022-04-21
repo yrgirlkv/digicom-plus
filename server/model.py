@@ -26,28 +26,30 @@ def risk_model(id):
 
     dummy_ratings = {
         # financial risk - objective
-        "liquid_ratio": 5,
-        "current_ratio": 5,
-        "growth_rate": 5,
-        "operating_margin": 5,
-        "debt_to_equity": 5,
-        "financial_compliance": 5,
+        "liquid_ratio": 1,
+        "current_ratio": 1,
+        "growth_rate": 1,
+        "operating_margin": 1,
+        "debt_to_equity": 1,
+        "financial_compliance": 1,
         # financial risk - subjective
-        "market_feedback": 5,
-        "defaults": 10,
+        "market_feedback": 1,
+        "defaults": 1,
         # operational risk
-        "operation_tenure": 3,
-        "size": 5,
+        "operation_tenure": 1,
+        "size": 1,
         # management assessment
-        "tenure": 5,
-        "reliability": 7,
-        "compliance": 3,
-        "barrier_to_entry": 10,
-        "BCI_comparison": 10,
-        "country_risk": 10,
+        "tenure": 1,
+        "reliability": 1,
+        "compliance": 1,
+        "barrier_to_entry": 1,
+        "BCI_comparison": 1,
+        "country_risk": 1,
     }
 
     for key in dummy_ratings:
-        score += dummy_ratings[key] * (factor_weights[key] / 100)
+        score += dummy_ratings[key] * factor_weights[key]
+
+    score = score / 100
 
     return {"id": id, "score": score}
