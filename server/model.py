@@ -48,6 +48,6 @@ def risk_model(id):
     }
 
     for key in dummy_ratings:
-        score += dummy_ratings[key] * factor_weights[key]
+        score += dummy_ratings[key] * (factor_weights[key] / 100)
 
     return {"id": id, "score": score}
