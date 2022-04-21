@@ -18,3 +18,9 @@ To set up this app:
 ### Structure
 
 This project is setup largely as a skeleton; the Flask server is separated from the model for ease of refactoring. Replacing Flask with Django or another server technology should be fairly straightforward.
+
+### To do
+
+1. Integrate the server with the APIs of any data providers.
+2. Set up databases to store the info.
+3. Security & auth; power-user customers will also need storage for their own custom weights and rating scales when generating scores for the companies they're looking into.
