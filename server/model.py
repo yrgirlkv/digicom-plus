@@ -1,7 +1,6 @@
 def risk_model(id):
-    score = 0
 
-    factor_weights = {
+    weights = {
         # financial risk - objective
         "liquid_ratio": 5,
         "current_ratio": 5,
@@ -47,9 +46,7 @@ def risk_model(id):
         "country_risk": 1,
     }
 
-    for key in dummy_ratings:
-        score += dummy_ratings[key] * factor_weights[key]
-
-    score = score / 100
+    total = sum(weights.values())
+    score = sum(dummy_ratings[key] * weights[key] for key in weights) / total
 
     return {"id": id, "score": score}
