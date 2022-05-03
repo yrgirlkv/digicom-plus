@@ -1,6 +1,6 @@
 def risk_model(id):
 
-    weights = {
+    digicom_weights = {
         # financial risk - objective
         "liquid_ratio": 5,
         "current_ratio": 5,
@@ -46,7 +46,10 @@ def risk_model(id):
         "country_risk": 1,
     }
 
-    total = sum(weights.values())
-    score = sum(dummy_ratings[key] * weights[key] for key in weights) / total
+    total = sum(digicom_weights.values())
+    score = (
+        sum(dummy_ratings[key] * digicom_weights[key] for key in digicom_weights)
+        / total
+    )
 
     return {"id": id, "score": score}
