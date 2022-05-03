@@ -23,7 +23,7 @@ def risk_model(id):
         "country_risk": 10,
     }
 
-    dummy_ratings = {
+    company_ratings = {
         # financial risk - objective
         "liquid_ratio": 1,
         "current_ratio": 1,
@@ -46,9 +46,12 @@ def risk_model(id):
         "country_risk": 1,
     }
 
+    # pass API data into ratings.py
+    # populate company_ratings with appropriate figures
+
     total = sum(digicom_weights.values())
     score = (
-        sum(dummy_ratings[key] * digicom_weights[key] for key in digicom_weights)
+        sum(company_ratings[key] * digicom_weights[key] for key in digicom_weights)
         / total
     )
 

@@ -1,11 +1,11 @@
-Rating,Liquid ratio,Current ratio,Growth rate,Operating margin trend,Debt to Equity,Market Feedback
-1,1.4,3,20,30,.5,1
-2,1.3,2.5,15,25,.7,2
-3,1.2,2,10,20,.8,3
-4,1.1,1.8,7,15,0.9,4
-5,1,1.5,3,10,1,5
-6,0.9,1.4,0,6,1.5,6
-7,.8,1.2,-2,4,1.75,7
-8,0.7,1.1,-5,0,2,8
-9,0.6,1,-8,-1,2.5,9
-10,0.5,.8,-15,-10,3,10
+Rating,Liquid ratio,Current ratio,Growth rate,Operating margin trend,Financial compliance,Debt to Equity,Market Feedback,Loan repayment Default,Business operational tenure,Management assessment - tenure,Management assessment - Reliability,Size of organisation
+1,1.4:1,3:1,20,30,Y,.5:1,1,No Defaults,50,10,Positive Feedabck,100000000
+2,1.3:1,2.5:1,15,25,,.7:1,2,,25,7,,75000000
+3,1.2:1,2:1,10,20,,.8:1,3,,10,5,Average,50000000
+4,1.1:1,1.8:1,7,15,,0.9:1,4,,5,3,,10000000
+5,1:1,1.5:1,3,10,,1:1,5,,3,1,No Opinion,5000000
+6,0.9:1,1.4:1,0,6,,1.5:1,6,,1,0,,3000000
+7,.8:1,1.2:1,-2,4,,1.75:1,7,Past default,0,,,1000000
+8,0.7:1,1.1:1,-5,0,N,2:1,8,Current 1,,,Negative feedback,750000
+9,0.6:1,1:1,-8,-1,,2.5:1,9,Current 2,,,,500000
+10,0.5:1,.8:1,-15,-10,,3:1,10,Current 3,,,,0
