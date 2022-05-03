@@ -1,4 +1,5 @@
 def risk_model(id):
+    # import ratings
 
     digicom_weights = {
         # financial risk - objective
